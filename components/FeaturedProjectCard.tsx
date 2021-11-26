@@ -1,35 +1,54 @@
+import React from 'react';
 import Link from 'next/link';
-import useSWR from 'swr';
+
+import Image from 'next/image';
 import cn from 'classnames';
 
-import fetcher from 'lib/fetcher';
-import { Views } from 'lib/types';
+type CardProps = React.PropsWithChildren<{
+  title: string;
+  description: string;
+  slug: string;
+  image: string;
+  color: string;
+}>;
 
-export default function FeaturedProjectCard({
-  title,
-  description,
-  slug,
-  image
-}) {
-  const { data } = useSWR<Views>(`/api/views/${slug}`, fetcher);
-  const views = data?.total;
-
-  return (
-    <Link href={`/project/${slug}`}>
-      <a
-        className={cn(
-          'transform hover:scale-[1.01] transition-all',
-          'rounded-2xl w-full sm:w-1/2 p-1'
-        )}
+const FeaturedProjectCard = React.forwardRef(
+  ({ title, description, slug, image, color }: CardProps, ref?: any) => {
+    return (
+      <div
+        style={{ transitionTimingFunction: 'cubic-bezier(0.19, 1, 0.22, 1)' }}
+        className="hover:scale-[1.01] active:scale-[.98] sm:w-1/2 p-2 out-expo duration-1000 transition"
       >
-        <div className="flex flex-col justify-between h-full bg-pink dark:bg-gray-900 rounded-lg p-4">
-          <div className="flex flex-col md:flex-row justify-between">
-            <h4 className="text-lg md:text-lg font-medium mb-6 sm:mb-10 w-full text-gray-900 dark:text-gray-100 tracking-tight">
-              {title}
-            </h4>
-          </div>
+        <div ref={ref} className="">
+          <Link scroll={false} href={`/project/${slug}`}>
+            <a className={cn('transform group  ', ' overflow-hidden w-full  ')}>
+              <div
+                className={`bg-${color} flex flex-col rounded-xl overflow-hidden dark:bg-gray-900`}
+              >
+                <div className="flex transition-opacity relative ">
+                  <div className="bg-cream opacity-0 transition-opacity group-hover:opacity-10 w-full h-full absolute z-40" />
+                  <Image
+                    width={511}
+                    height={224}
+                    quality={100}
+                    alt={title}
+                    src={image}
+                  ></Image>
+                </div>
+                <div className="w-full"></div>
+                <div className="w-full flex bg-black dark:bg-cream justify-between items-center pt-3  pb-2.5 px-4 text-cream dark:text-gray-700">
+                  <h4 className="font-sans text-base font-bold">{title}</h4>
+                  <span className="font-mono text-sm">{description}</span>
+                </div>
+              </div>
+            </a>
+          </Link>
         </div>
-      </a>
-    </Link>
-  );
-}
+      </div>
+    );
+  }
+);
+
+FeaturedProjectCard.displayName = 'FeaturedProjectCard';
+
+export default FeaturedProjectCard;

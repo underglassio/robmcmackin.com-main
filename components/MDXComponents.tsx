@@ -1,14 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-import ProsCard from 'components/ProsCard';
-import ConsCard from 'components/ConsCard';
-import Gumroad from 'components/metrics/Gumroad';
-import Unsplash from 'components/metrics/Unsplash';
-import Analytics from 'components/metrics/Analytics';
-import YouTube from 'components/metrics/Youtube';
-import Step from 'components/Step';
 import ImageWithTheme from 'components/ImageWithTheme';
+import FadeInOnScroll from 'components/FadeInOnScroll';
 
 const CustomLink = (props) => {
   const href = props.href;
@@ -25,21 +19,18 @@ const CustomLink = (props) => {
   return <a target="_blank" rel="noopener noreferrer" {...props} />;
 };
 
-function RoundedImage(props) {
-  return <Image alt={props.alt} className="rounded-lg" {...props} />;
+function LoadImage(props) {
+  return (
+    <FadeInOnScroll>
+      <Image alt={props.alt} {...props} />
+    </FadeInOnScroll>
+  );
 }
 
 const MDXComponents = {
-  Image: RoundedImage,
+  Image: LoadImage,
   ImageWithTheme,
-  a: CustomLink,
-  Analytics,
-  ConsCard,
-  Gumroad,
-  ProsCard,
-  Step,
-  Unsplash,
-  YouTube
+  a: CustomLink
 };
 
 export default MDXComponents;

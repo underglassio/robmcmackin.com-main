@@ -4,18 +4,17 @@ import Container from 'components/Container';
 
 export default function NotFound() {
   return (
-    <Container title="404 – Lee Robinson">
-      <div className="flex flex-col justify-center items-start max-w-3xl mx-auto mb-16">
-        <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white">
-          Hey, where are you going?
+    <Container title="Page not found – Rob McMackin">
+      <div className="flex flex-col justify-center text-center items-start max-w-3xl mx-auto mb-16">
+        <h1 className="font-bold text-3xl md:text-3xl tracking-tight mb-2 text-black dark:text-white">
+          404
         </h1>
-        <p className="text-gray-600 dark:text-gray-400 mb-8">
-          There's nothing in here. Come on, I think you've had too much to
-          drink, let's get you back to the others.
+        <p className="text-gray-600 dark:text-gray-400 mb-4">
+          Oops! There's nothing here.
         </p>
         <Link href="/">
-          <a className="p-1 sm:p-4 w-64 font-bold mx-auto bg-purple dark:bg-gray-800 text-center rounded-md text-cream dark:text-white">
-            Return Home
+          <a className="p-1 sm:p-3 w-64 font-bold mx-auto bg-primary dark:bg-gray-800 text-center rounded-md text-cream dark:text-white">
+            Go back
           </a>
         </Link>
       </div>

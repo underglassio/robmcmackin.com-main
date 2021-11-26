@@ -33,57 +33,25 @@ const computedFields: ComputedFields = {
   }
 };
 
-const Blog = defineDocumentType(() => ({
-  name: 'Blog',
-  filePathPattern: 'blog/*.mdx',
+const Project = defineDocumentType(() => ({
+  name: 'Project',
+  filePathPattern: 'projects/*.mdx',
   bodyType: 'mdx',
   fields: {
     title: { type: 'string', required: true },
-    publishedAt: { type: 'string', required: true },
-    summary: { type: 'string', required: true },
-    image: { type: 'string', required: true }
-  },
-  computedFields
-}));
-
-const Newsletter = defineDocumentType(() => ({
-  name: 'Newsletter',
-  filePathPattern: 'newsletter/*.mdx',
-  bodyType: 'mdx',
-  fields: {
-    title: { type: 'string', required: true },
-    publishedAt: { type: 'string', required: true },
-    summary: { type: 'string', required: true },
-    image: { type: 'string', required: true }
-  },
-  computedFields
-}));
-
-const Snippet = defineDocumentType(() => ({
-  name: 'Snippet',
-  filePathPattern: 'snippets/*.mdx',
-  bodyType: 'mdx',
-  fields: {
-    title: { type: 'string', required: true },
-    description: { type: 'string', required: true },
-    logo: { type: 'string', required: true }
-  },
-  computedFields
-}));
-
-const OtherPage = defineDocumentType(() => ({
-  name: 'OtherPage',
-  filePathPattern: '*.mdx',
-  bodyType: 'mdx',
-  fields: {
-    title: { type: 'string', required: true }
+    role: { type: 'string', required: false },
+    image: { type: 'string', required: true },
+    url: { type: 'string', required: false },
+    date: { type: 'string', required: true },
+    cover: { type: 'string', required: true },
+    color: { type: 'string', required: true }
   },
   computedFields
 }));
 
 const contentLayerConfig = makeSource({
   contentDirPath: 'data',
-  documentTypes: [Blog, Newsletter, Snippet, OtherPage],
+  documentTypes: [Project],
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [
