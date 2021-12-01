@@ -3,8 +3,8 @@ import Button from 'components/Button';
 
 export default function Contact() {
   return (
-    <Container title="Contact — Rob McMackin">
-      <div className="flex-col justify-center items-start max-w-3xl px-2 mx-auto mb-16 grid grid-cols-6">
+    <Container>
+      <div className="flex-col justify-center items-start max-w-3xl mx-auto mb-16 grid grid-cols-6">
         <div className="col-span-6 md:col-span-4">
           <h1 className="font-bold text-2xl md:text-2xl tracking-tight mt-2 mb-3 text-black dark:text-white">
             Get in touch

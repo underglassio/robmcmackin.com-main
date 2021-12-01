@@ -27,7 +27,7 @@ const MotionServiceItem = motion(ServiceItem);
 export default function ServicesSection() {
   return (
     <FadeInOnScroll>
-      <div className="items-center w-full px-2 ">
+      <div className="items-center w-full">
         <h2>I can help you with</h2>
         <div className="text-black grid grid-cols-3 gap-6 dark:text-cream w-full mt-6 ">
           <MotionServiceItem
@@ -40,7 +40,7 @@ export default function ServicesSection() {
             variants={childFadeIn}
             transition={bounceTransition}
             title="Design"
-            description="Premium UI and UX for your web or mobile app. I can also tidy up those last details in code."
+            description="Premium UI and UX for your web or mobile app. I also tidy up those last details in code."
           />
           <MotionServiceItem
             variants={childFadeIn}

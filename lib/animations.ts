@@ -12,7 +12,7 @@ export const containerFadeIn = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 0.2,
+      delay: 0.1,
       duration: 0.8,
       delayChildren: 0.2,
       staggerChildren: 0.1

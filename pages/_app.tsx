@@ -1,5 +1,4 @@
 import 'styles/global.css';
-import { useState, useEffect, useRef } from 'react';
 
 import Image from 'next/image';
 import NextLink from 'next/link';
@@ -8,10 +7,11 @@ import cn from 'classnames';
 import NextNProgress from 'nextjs-progressbar';
 import MobileMenu from 'components/MobileMenu';
 import type { AppProps } from 'next/app';
-// import { ThemeProvider } from 'next-themes';
+
+import Button from 'components/Button';
 import { SessionProvider } from 'next-auth/react';
 import { useRouter } from 'next/router';
-import { useAnalytics } from 'lib/analytics';
+// import { useAnalytics } from 'lib/analytics';
 import Head from 'next/head';
 
 import { motion, AnimatePresence } from 'framer-motion';
@@ -22,22 +22,39 @@ const variants = {
   exit: { opacity: 0 }
 };
 
+const handExitComplete = (): void => {
+  if (typeof window !== 'undefined') {
+    // Get the hash from the url
+    const hashId = window.location.hash;
+    if (hashId) {
+      // Use the hash to find the first element with that id
+      const element = document.querySelector(hashId);
+      if (element) {
+        // Smooth scroll to that elment
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+          inline: 'nearest'
+        });
+      }
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }
+};
+
 function NavItem({ href, text }) {
   return (
-    <NextLink href={href}>
-      <a
-        className={cn(
-          ' text-black hover:text-gray-600 dark:text-gray-400 font-medium hidden md:inline-block p-1.5 sm:px-3 sm:py-1.5 text-base rounded-md  dark:hover:bg-gray-800 transition-all'
-        )}
-      >
-        <span>{text}</span>
+    <NextLink passHref href={href}>
+      <a className="text-gray-700 uppercase tracking-widest hover:text-gray-600 dark:text-gray-400 font-bold inline-block px-3 text-xsm transition-all cursor-pointer">
+        {text}
       </a>
     </NextLink>
   );
 }
 
 export default function App({ Component, pageProps }: AppProps) {
-  useAnalytics();
+  // useAnalytics();
   const router = useRouter();
   const { ...customMeta } = pageProps;
   const meta = {
@@ -47,6 +64,7 @@ export default function App({ Component, pageProps }: AppProps) {
     type: 'website',
     ...customMeta
   };
+
   return (
     <SessionProvider session={pageProps.session}>
       <Head>
@@ -76,43 +94,37 @@ export default function App({ Component, pageProps }: AppProps) {
         )}
       </Head>
       <FadeInOnScroll>
-        <div className="flex flex-col justify-center px-8">
-          <nav className="flex items-center justify-between w-full relative md:max-w-3xl border-gray-200 dark:border-gray-700 mx-auto pt-8 pb-4 sm:pb-10  text-gray-900 bg-cream  dark:bg-gray-900 bg-opacity-60 dark:text-gray-100">
-            <div className="pl-2 flex items-center">
+        <div className="flex flex-col justify-center px-4">
+          <nav className="flex items-center justify-between w-full sticky md:max-w-3xl border-gray-200 dark:border-gray-700 mx-auto py-6  text-gray-900 bg-cream  dark:bg-gray-900 bg-opacity-60 dark:text-gray-100">
+            <div className="flex items-center">
               <MobileMenu />
               <NextLink href="/">
                 <a className="mr-3 flex">
                   <Image
                     alt="rmcm"
                     src="/logo-2.svg"
-                    width={42}
-                    height={42}
+                    width={36}
+                    height={36}
                     quality={100}
                   />
                 </a>
               </NextLink>
-              <NavItem href="/" text="Work" />
-              <NavItem href="/about" text="About" />
-              <NavItem href="/contact" text="Contact" />
+              <NavItem href="/#projects" text="Projects" />
+              <NavItem href="/#writing" text="Writing" />
+              <NavItem href="/#about" text="About" />
+              <NavItem href="mailto:rob.h.mcmackin@gmail.com" text="Contact" />
             </div>
           </nav>
         </div>
       </FadeInOnScroll>
       <NextNProgress color="#ff8bb0" />
-      <AnimatePresence
-        exitBeforeEnter
-        initial={true}
-        onExitComplete={() => {
-          window.scrollTo(0, 0);
-        }}
-      >
-        {' '}
+      <AnimatePresence exitBeforeEnter onExitComplete={handExitComplete}>
         <motion.main
           variants={variants}
           initial="hidden"
           animate="enter"
-          key={router.asPath}
           exit="exit"
+          key={router.route}
           className="bg-cream dark:bg-gray-900 h-full"
         >
           <Component {...pageProps} />

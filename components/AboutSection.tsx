@@ -5,14 +5,15 @@ export default function About() {
   return (
     <>
       <FadeInOnScroll>
-        <div className="flex-col leading-standard text-base justify-center items-start max-w-3xl px-2 mx-auto mb-16 grid grid-cols-6">
-          <div className="col-span-3">
-            <h2>Oh hey, I'm Rob</h2>
+        <div className="flex-col leading-standard text-base justify-center items-start max-w-3xl mx-auto mb-16 grid grid-cols-10 gap-4">
+          <div className="col-span-10 md:col-span-6">
+            <a className="anchor" id="about" />
+            <h2>Oh hey</h2>
             <div className="mt-4  body  text-black dark:text-gray-400">
               <p>
-                I’ve been designing digital stuff for most of my life. I also
-                find myself writing, coding, illustrating, and reminding myself
-                that being a generalist is fine.
+                I'm Rob. I’ve been designing digital stuff for most of my life.
+                I also find myself writing, coding, illustrating, and reminding
+                myself that being a generalist is fine.
               </p>
               <p className="mt-4">
                 My most recent role was at <a href="http://slite.com">Slite</a>,
@@ -27,7 +28,7 @@ export default function About() {
               <p className="mt-4">Originally from Dublin, now in Berlin.</p>
             </div>
           </div>
-          <div className="col-span-3 flex items-center justify-end relative pt-4">
+          <div className="col-span-10 md:col-span-4 hidden md:flex items-center justify-center md:justify-end relative pt-8">
             <Image
               alt="me"
               src="/me.png"

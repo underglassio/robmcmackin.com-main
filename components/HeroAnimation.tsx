@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { scaleCorrectors } from 'framer-motion/types/projection/styles/scale-correction';
 import Image from 'next/image';
 
 export const phoneFadeIn = {
@@ -40,11 +41,11 @@ export const appFadeIn = {
 export default function HeroAnimation() {
   return (
     <div
-      style={{ width: 364, height: 364 }}
-      className="flex justify-end w-full items-center relative"
+      style={{ width: 364, height: 364, transform: 'scale(.9)' }}
+      className="hidden md:flex justify-end w-full items-center relative"
     >
       <motion.div
-        variants={tabletFadeIn}
+        variants={{ tabletFadeIn }}
         initial="hidden"
         animate="show"
         transition={{
@@ -66,7 +67,7 @@ export default function HeroAnimation() {
         />
       </motion.div>
       <motion.div
-        variants={appFadeIn}
+        variants={{ appFadeIn }}
         initial="hidden"
         animate="show"
         transition={{
@@ -88,7 +89,7 @@ export default function HeroAnimation() {
         />
       </motion.div>
       <motion.div
-        variants={phoneFadeIn}
+        variants={{ phoneFadeIn }}
         transition={{
           delay: 0.2,
           opacity: { duration: 0.1 },
@@ -128,8 +129,8 @@ export default function HeroAnimation() {
           src="/hero/mask.svg"
           quality={100}
           priority={true}
-          width={384.18}
-          height={311}
+          width={322.72}
+          height={249}
         />
       </div>
     </div>

@@ -9,9 +9,28 @@ type ButtonProps = {
   href?: string;
   arrow?: Boolean;
   target?: string;
+  reverse?: Boolean;
   rel?: string;
 };
-
+function Arrow(reverse) {
+  return (
+    <svg
+      width="14"
+      height="14"
+      viewBox="0 0 14 14"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="ml-1.5 mr-1.5 mt-[1px] group-hover:animate-bump transition-all ease-out"
+    >
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M13.5 0H5.5C4.94772 0 4.5 0.447715 4.5 1C4.5 1.55228 4.94772 2 5.5 2H10.0858L0.292893 11.7929C-0.0976315 12.1834 -0.0976315 12.8166 0.292893 13.2071C0.683417 13.5976 1.31658 13.5976 1.70711 13.2071L11.5 3.41421V8C11.5 8.55228 11.9477 9 12.5 9C13.0523 9 13.5 8.55228 13.5 8V0Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}
 const Button = ({
   children,
   className,
@@ -21,6 +40,7 @@ const Button = ({
   target,
   rel,
   arrow,
+  reverse,
   ...props
 }: ButtonProps) => {
   let classes =
@@ -30,7 +50,7 @@ const Button = ({
     classes = [
       className,
       classes,
-      ' bg-primary px-4 py-3 text-cream justify-center text-center hover:bg-primary-light hover'
+      ' bg-primary px-3 py-[.4rem] text-cream justify-center text-center cursor-pointer hover:bg-primary-light hover'
     ].join(' ');
   } else if (ghost) {
     classes = [
@@ -42,54 +62,18 @@ const Button = ({
     classes = [className, classes, 'bg-none'].join(' ');
   }
 
-  if (target) {
-    return (
-      <a href={href} rel={rel} target={target} className={classes} {...props}>
-        <span>{children}</span>
-        {arrow && (
-          <svg
-            width="16"
-            height="16"
-            viewBox="0 0 16 16"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="ml-1.5 mt-[1px] group-hover:animate-bump transition-all ease-in-out"
-          >
-            <path
-              d="M14.5 1H5.5M14.5 1V10M14.5 1L2.20036 13.2996L1 14.5"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-          </svg>
-        )}
-      </a>
-    );
-  }
-  if (!!href) {
-    return (
-      <Link href={href} {...props}>
-        <a className={classes}>
-          <span>{children}</span>
-          {arrow && (
-            <svg
-              width="22"
-              height="16"
-              viewBox="0 0 22 16"
-              fill="none"
-              className="ml-1.5 mt-[1px] group-hover:animate-bump transition-all ease-out"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1 7C0.447715 7 -4.82823e-08 7.44772 0 8C4.82823e-08 8.55228 0.447715 9 1 9L1 7ZM21.7071 8.7071C22.0976 8.31658 22.0976 7.68342 21.7071 7.29289L15.3431 0.928931C14.9526 0.538407 14.3195 0.538407 13.9289 0.928931C13.5384 1.31946 13.5384 1.95262 13.9289 2.34314L19.5858 8L13.9289 13.6569C13.5384 14.0474 13.5384 14.6805 13.9289 15.0711C14.3195 15.4616 14.9526 15.4616 15.3431 15.0711L21.7071 8.7071ZM1 9L21 9L21 7L1 7L1 9Z"
-                fill="currentColor"
-              />
-            </svg>
-          )}
-        </a>
-      </Link>
-    );
-  }
+  return (
+    <a href={href} rel={rel} target={target} className={classes} {...props}>
+      {arrow && reverse && (
+        <div className="-rotate-90">
+          <Arrow />
+        </div>
+      )}
+      <span>{children}</span>
+      {arrow && !reverse && <Arrow />}
+    </a>
+  );
+
   return (
     <a {...props} className={classes}>
       {children}

@@ -10,10 +10,10 @@ export default function ProjectsSection() {
       variants={containerFadeIn}
       initial="hidden"
       animate="show"
-      className="flex-wrap"
+      className="w-full"
     >
-      <h2 className="px-2">Projects</h2>
-      <ul className="flex w-full flex-wrap">
+      <a className="anchor" id="projects" />
+      <ul className="grid grid-cols-2 gap-4">
         <MotionProject
           variants={childFadeIn}
           transition={{
@@ -22,10 +22,14 @@ export default function ProjectsSection() {
           }}
           title="Slite"
           key={1}
+          position="40px 40px/98%"
           description="App · Web · Brand"
-          image="/static/images/projects/slite-thumbnail.png"
+          image="/static/images/projects/slite/slite-cover.gif"
+          thumbnail="/static/images/projects/slite/slite-thumbnail.png"
           slug="slite"
-          color="secondary"
+          color="#ff8cb1"
+          fullWidth
+          tall
         />
         <MotionProject
           variants={childFadeIn}
@@ -35,10 +39,11 @@ export default function ProjectsSection() {
           }}
           key={2}
           title="Beyond Translation"
+          position="-50% -50%/122%"
           description="Web"
-          image="/static/images/projects/beyond-translation-cover.png"
+          image="/static/images/projects/bt/bt.gif"
           slug="beyond-translation"
-          color="primary"
+          color="#6046ee"
         />
         <MotionProject
           variants={childFadeIn}
@@ -48,10 +53,11 @@ export default function ProjectsSection() {
           }}
           key={3}
           title="Booli"
+          position="center 45px/80%"
           description="Game · Web"
-          image="/static/images/projects/booli-cover.png"
-          slug=""
-          color="primary"
+          image="/static/images/projects/booli/booli.gif"
+          slug="booli"
+          color="#fe80a6"
         />
         <MotionProject
           variants={childFadeIn}
@@ -61,10 +67,13 @@ export default function ProjectsSection() {
           }}
           key={4}
           title="Omnious"
-          description="Brand · Web · Brand"
-          image="/static/images/projects/omnious-cover.png"
-          slug="beyond-translation"
-          color="secondary"
+          position="center 42px/90%"
+          description="App · Web · Brand"
+          image="/static/images/projects/omnious/omnious-cover.png"
+          thumbnail="/static/images/projects/omnious/omnious-thumbnail.png"
+          slug="omnious"
+          color="#6C52F2"
+          fullWidth
         />
       </ul>
     </motion.div>

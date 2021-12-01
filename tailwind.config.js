@@ -26,6 +26,7 @@ module.exports = {
         gray: {
           0: '#fff',
           100: '#fafafa',
+          500: '#8190A3',
           600: '#708094',
           700: '#45566c',
           900: '#313f52'
@@ -40,16 +41,20 @@ module.exports = {
         full: '100%'
       },
       fontSize: {
-        sm: '.8rem',
-        base: '18px',
-        md: '1.25rem',
-        lg: '1.56rem',
-        xl: '1.93rem',
-        '2xl': '2.4rem',
-        '3xl': '3rem',
-        '4xl': '3.8rem',
+        xsm: '.694rem',
+        sm: '.9rem',
+        base: '20px',
+        md: '1.2rem',
+        lg: '1.44rem',
+        xl: '1.72rem',
+        '2xl': '2.074rem',
+        '3xl': '2.488rem',
+        '4xl': '2.986rem',
         '5xl': '4.76rem',
         '6xl': '5.96rem'
+      },
+      height: {
+        104: '26rem'
       },
       lineHeight: {
         standard: '145%',
@@ -75,7 +80,7 @@ module.exports = {
         floating: 'floating 4s infinite ease-in-out'
       },
       maxWidth: {
-        '3xl': '46rem'
+        '3xl': '42rem'
       },
       typography: (theme) => ({
         DEFAULT: {

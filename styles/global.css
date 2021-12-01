@@ -2,127 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @font-face {
-  font-family: SourceSerif;
-  font-weight: 400;
-  src: url(/fonts/SourceSerifPro-Regular.ttf) format('truetype');
-}
-@font-face {
-  font-family: SourceSerif;
-  font-weight: 600;
-  src: url(/fonts/SourceSerifPro-SemiBold.ttf) format('truetype');
-} */
-
-@font-face {
-  font-family: 'GT Walsheim';
-  font-weight: 400;
-  src: url(/fonts/GT-Walsheim-Regular-Trial.woff2) format('woff2');
-}
-@font-face {
-  font-family: 'GT Walsheim';
-  font-weight: 500;
-  src: url(/fonts/GT-Walsheim-Medium-Trial.woff2) format('woff2');
-}
 @font-face {
   font-family: 'GT Walsheim';
   font-weight: 700;
-  src: url(/fonts/GT-Walsheim-Bold-Trial.woff2) format('woff2');
-}
-
-@font-face {
-  font-family: 'GT Walsheim';
-  font-weight: 400;
-  src: url(/fonts/GT-Walsheim-Regular-Trial.woff2) format('woff2');
-}
-@font-face {
-  font-family: 'GT Walsheim';
-  font-weight: 500;
-  src: url(/fonts/GT-Walsheim-Medium-Trial.woff2) format('woff2');
-}
-@font-face {
-  font-family: 'GT Walsheim';
-  font-weight: 700;
-  src: url(/fonts/GT-Walsheim-Bold-Trial.woff2) format('woff2');
+  src: url(/fonts/GT-Walsheim-Bold.woff2) format('woff2'),
+    url(/fonts/GT-Walsheim-Bold.woff) format('woff');
 }
 @font-face {
   font-family: 'GT Walsheim';
   font-weight: 900;
-  src: url(/fonts/GT-Walsheim-Ultra-Bold-Trial.woff2) format('woff2');
+  src: url(/fonts/GT-Walsheim-Ultra-Bold.woff2) format('woff2'),
+    url(/fonts/GT-Walsheim-Ultra-Bold.woff) format('woff');
 }
 @font-face {
   font-family: 'ABCMonumentSemiMono';
   font-weight: 400;
-  src: url(/fonts/ABCMonumentGroteskSemi-Mono-Regular-Trial.woff2)
-    format('woff2');
-}
-@font-face {
-  font-family: 'ABCMonumentSemiMono';
-  font-weight: 700;
-  src: url(/fonts/ABCMonumentGroteskSemi-Mono-Bold-Trial.woff2) format('woff2');
-}
-@font-face {
-  font-family: 'Space Mono';
-  font-weight: 400;
-  src: url(/fonts/SpaceMono-Regular.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Cutive Mono';
-  font-weight: 400;
-  src: url(/fonts/CutiveMono-Regular.ttf) format('truetype');
+  src: url(/fonts/ABCMonumentGroteskSemi-Mono-Regular.woff2) format('woff2'),
+    url(/fonts/ABCMonumentGroteskSemi-Mono-Regular.woff) format('woff');
 }
 
-@font-face {
-  font-family: 'PT Mono';
-  font-weight: 400;
-  src: url(/fonts/PTMono-Regular.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'TrueSansMono';
-  font-weight: 400;
-  src: url(/fonts/TrueSansMonoTrial-Regular.otf) format('opentype');
-}
-
-@font-face {
-  font-family: 'LarsMono';
-  font-weight: 400;
-  src: url(/fonts/LarsMonoTrial-Regular.otf) format('opentype');
-}
-
-@font-face {
-  font-family: 'MaisonMono';
-  font-weight: 400;
-  src: url(/fonts/MaisonMonoTRIAL-Regular.otf) format('opentype');
-}
-
-@font-face {
-  font-family: 'MaisonNeueMono';
-  font-weight: 400;
-  src: url(/fonts/MaisonNeueMonoTrial-Regular.otf) format('opentype');
-}
-
-/* @font-face {
-  font-family: 'Lars';
-  font-weight: 700;
-  src: url(/fonts/LarsTrial-Bold.otf) format('otf');
-}
-@font-face {
-  font-family: 'Lars';
-  font-weight: 900;
-  src: url(/fonts/LarsTrial-BoldExtended.otf) format('otf');
-}
-@font-face {
-  font-family: 'LarsMono';
-  font-weight: 400;
-  src: url(/fonts/LarsMonoTrial-Regular.otf) format('otf');
-}
-@font-face {
-  font-family: 'LarsMono';
-  font-weight: 700;
-  src: url(/fonts/LarsMonoTrial-Bold.otf) format('otf');
-}
-
-*/
 .woff2 ::selection {
   background-color: #ff8cb1;
   color: #fefefe;
@@ -131,7 +29,6 @@
 html {
   @apply text-base;
   min-width: 360px;
-  scroll-behavior: smooth;
   height: 100%;
 }
 
@@ -175,7 +72,7 @@ body {
 
 .body,
 .prose p {
-  @apply font-mono leading-loose text-sm;
+  @apply font-mono leading-normal  text-base md:text-sm;
 }
 
 .prose .anchor {
@@ -210,6 +107,9 @@ body {
   @apply m-0;
 }
 
+hr {
+  @apply w-full border-gray-300 mt-6 mb-2;
+}
 .highlight-line {
   @apply block px-4 -mx-4 bg-gray-100 border-l-4 border-blue-500 dark:bg-gray-800;
 }
@@ -219,12 +119,16 @@ body {
 .animation-delay-2 {
   animation-delay: 0.4s;
 }
-/* Remove Safari input shadow on mobile */
+
 input[type='text'],
 input[type='email'] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+a:hover {
+  cursor: pointer;
 }
 
 .prose p {
@@ -253,7 +157,7 @@ table {
 }
 h2,
 .prose h2 {
-  @apply font-bold text-2xl md:text-lg mb-2 text-black dark:text-white;
+  @apply font-bold text-lg mb-2 leading-normal text-black dark:text-white;
 }
 .prose h2 {
   @apply mb-4;
@@ -272,9 +176,16 @@ s::before {
   width: 110%;
   position: absolute;
   left: -5%;
-  top: calc(50%);
+  top: calc(52%);
   @apply border-b-2;
   @apply border-b-black;
+}
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -50px;
+  visibility: hidden;
 }
 
 .arrow-box {

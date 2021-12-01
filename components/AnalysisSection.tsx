@@ -1,11 +1,9 @@
-import React, { useEffect } from 'react';
-import { motion, useAnimation } from 'framer-motion';
+import React from 'react';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Button from 'components/Button';
 import FadeInOnScroll from './FadeInOnScroll';
 import { childFadeIn, bounceTransition } from '../lib/animations';
-
-import { useInView } from 'react-intersection-observer';
 
 type AnalysisProps = React.PropsWithChildren<{
   href: string;
@@ -20,7 +18,7 @@ const AnalysisItem = React.forwardRef(
         rel="noopener noreferrer"
         ref={ref}
         href={href}
-        className="mr-4 group transform   pb-2 pt-4 w-1/6  rounded-md"
+        className="mr-4 group transform  pt-4  rounded-md"
       >
         <div className="mb-3 flex flex-col justify-center items-center">
           <div
@@ -33,7 +31,7 @@ const AnalysisItem = React.forwardRef(
           >
             <Image alt={text} quality={100} src={logo} width={85} height={85} />
           </div>
-          <span className="text-black font-medium">{text}</span>
+          <span className="text-black font-medium text-sm">{text}</span>
         </div>
       </a>
     );
@@ -47,13 +45,14 @@ const MotionAnalysisItem = motion(AnalysisItem);
 export default function AnalysisSection() {
   return (
     <FadeInOnScroll className="w-full">
-      <div className="px-2 py-12 w-full">
+      <a className="anchor" id="writing" />
+      <div className="py-12 w-full">
         <h2>Writing</h2>
         <div className="body text-black w-full md:max-w-lg mb-6">
           Discover insights from my exploration into how great digital products
           around the world connect to specific&nbsp;niches.
         </div>
-        <div className="flex w-full">
+        <div className="grid grid-cols-4 md:grid-cols-6 gap-4 w-full">
           <MotionAnalysisItem
             text="Hopper"
             transition={bounceTransition}

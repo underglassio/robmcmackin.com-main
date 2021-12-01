@@ -11,7 +11,7 @@ type props = React.PropsWithChildren<{
 
 export default function FadeInOnScroll({ children, className }: props) {
   const controls = useAnimation();
-  const [ref, inView] = useInView({ threshold: 0.4 });
+  const [ref, inView] = useInView({ threshold: 0.3 });
 
   useEffect(() => {
     if (inView) {
