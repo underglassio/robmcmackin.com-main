@@ -2,39 +2,30 @@ import { motion } from 'framer-motion';
 import { scaleCorrectors } from 'framer-motion/types/projection/styles/scale-correction';
 import Image from 'next/image';
 
-export const phoneFadeIn = {
+const phoneFadeIn = {
   hidden: { opacity: 0, top: '40%', right: '-2%' },
   show: {
     opacity: 1,
     top: '20%',
     right: '6%'
-  },
-  transition: {
-    duration: 0.3
   }
 };
 
-export const tabletFadeIn = {
+const tabletFadeIn = {
   hidden: { opacity: 0, top: '60%', right: '4%' },
   show: {
     opacity: 1,
     top: '51%',
     right: '41%'
-  },
-  transition: {
-    duration: 0.3
   }
 };
 
-export const appFadeIn = {
+const appFadeIn = {
   hidden: { opacity: 0, top: '60%', right: '4%' },
   show: {
     opacity: 1,
     top: '8%',
     right: '38%'
-  },
-  transition: {
-    duration: 0.3
   }
 };
 
@@ -45,7 +36,7 @@ export default function HeroAnimation() {
       className="hidden md:flex justify-end w-full items-center relative"
     >
       <motion.div
-        variants={{ tabletFadeIn }}
+        variants={tabletFadeIn}
         initial="hidden"
         animate="show"
         transition={{
@@ -67,7 +58,7 @@ export default function HeroAnimation() {
         />
       </motion.div>
       <motion.div
-        variants={{ appFadeIn }}
+        variants={appFadeIn}
         initial="hidden"
         animate="show"
         transition={{
@@ -89,7 +80,7 @@ export default function HeroAnimation() {
         />
       </motion.div>
       <motion.div
-        variants={{ phoneFadeIn }}
+        variants={phoneFadeIn}
         transition={{
           delay: 0.2,
           opacity: { duration: 0.1 },
