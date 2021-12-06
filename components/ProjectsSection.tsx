@@ -27,7 +27,7 @@ export default function ProjectsSection() {
           video="/static/videos/slite-cover.mp4"
           thumbnail="/static/images/projects/slite/slite-thumbnail.png"
           slug="slite"
-          color="#ff8cb1"
+          color="#FF99B0"
           fullWidth
           tall
         />
@@ -40,10 +40,10 @@ export default function ProjectsSection() {
           key={2}
           title="Beyond Translation"
           description="Web"
-          video="/static/images/projects/bt/bt.webm"
+          video="/static/videos/bt.mp4"
           position="translate(62px, 89px) scale(1.2)"
           slug="beyond-translation"
-          color="#6046ee"
+          color="#6B5CF7"
         />
         <MotionProject
           variants={childFadeIn}
@@ -55,9 +55,9 @@ export default function ProjectsSection() {
           title="Booli"
           position=" scale(84%)"
           description="Game · Web"
-          image="/static/images/projects/booli/booli.gif"
+          video="/static/videos/booli.mp4"
           slug="booli"
-          color="#fe80a6"
+          color="#FF99B0"
         />
         <MotionProject
           variants={childFadeIn}
@@ -72,7 +72,7 @@ export default function ProjectsSection() {
           image="/static/images/projects/omnious/omnious-cover.png"
           thumbnail="/static/images/projects/omnious/omnious-thumbnail.png"
           slug="omnious"
-          color="#6C52F2"
+          color="#6B5CF7"
           fullWidth
         />
       </ul>
