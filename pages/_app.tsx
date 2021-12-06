@@ -112,7 +112,7 @@ export default function App({ Component, pageProps }: AppProps) {
               <NavItem href="/#projects" text="Projects" />
               <NavItem href="/#writing" text="Writing" />
               <NavItem href="/#about" text="About" />
-              <NavItem href="mailto:rob.h.mcmackin@gmail.com" text="Contact" />
+              <NavItem href="mailto:hello@robmcmackin.com" text="Contact" />
             </div>
           </nav>
         </div>
