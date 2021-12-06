@@ -8,7 +8,6 @@ export function middleware(req: NextRequest, ev: NextFetchEvent) {
     child-src *.youtube.com *.google.com *.twitter.com;
     style-src 'self' 'unsafe-inline' *.googleapis.com;
     img-src * blob: data:;
-    media-src 'none';
     connect-src *;
     font-src 'self';
   `;

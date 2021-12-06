@@ -51,20 +51,7 @@ export default function Home() {
           </div>
           <HeroAnimation />
         </div>
-        <video
-          // autoPlay
-          controls
-          width={500}
-          height={500}
-          // loop
-          // playsInline
-          style={{ width: '500px', height: '500px' }}
-          src={require('../public/static/videos/slite-cover.webm')}
-          // type="video/webm"
-        />
-        {/* <source src="/static/videos/slite-cover.mp4" type="video/mp4" />
-          <source src="/static/videos/slite-cover.webm" type="video/webm" />
-        </video> */}
+
         <span className={vspace} />
         <ProjectsSection />
         <span className={vspace} />
