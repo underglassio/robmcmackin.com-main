@@ -9,7 +9,8 @@ type CardProps = React.PropsWithChildren<{
   title: string;
   description: string;
   slug: string;
-  image: string;
+  image?: string;
+  video?: string;
   color: string;
   fullWidth?: boolean;
   position: string;
@@ -24,6 +25,7 @@ const FeaturedProjectCard = React.forwardRef(
       description,
       slug,
       image,
+      video,
       color,
       fullWidth,
       position,
@@ -55,15 +57,42 @@ const FeaturedProjectCard = React.forwardRef(
                       }}
                     />
                   )}
-                  <div
-                    style={{
-                      background: `url(${image}) no-repeat ${position} ${color}`
-                    }}
-                    className={cn(
-                      'bg-cream transition-opacity h- w-full z-20',
-                      tall ? 'h-80 md:h-94' : 'h-80'
-                    )}
-                  />
+                  {!!video && (
+                    <div
+                      className={cn(
+                        'bg-cream transition-opacity h- w-full z-20',
+                        tall ? 'h-80 md:h-94' : 'h-80'
+                      )}
+                    >
+                      <video
+                        autoPlay
+                        controls
+                        loop
+                        style={{ width: '500px', height: '500px' }}
+                        src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+                      />
+                      {/* <source
+                          src="/static/images/projects/slite/slite-cover.webm"
+                          type="video/webm"
+                        />
+                        <source
+                          src="/static/images/projects/slite/slite-cover.mp4"
+                          type="video/mp4"
+                        /> */}
+                      {/* </video> */}
+                    </div>
+                  )}
+                  {!!image && (
+                    <div
+                      style={{
+                        background: `url(${image}) no-repeat ${position} ${color}`
+                      }}
+                      className={cn(
+                        'bg-cream transition-opacity h- w-full z-20',
+                        tall ? 'h-80 md:h-94' : 'h-80'
+                      )}
+                    />
+                  )}
                 </div>
                 <div className="w-full"></div>
                 <div className="w-full flex bg-black dark:bg-cream justify-between items-center pt-3  pb-2.5 px-4 text-cream dark:text-gray-700">
