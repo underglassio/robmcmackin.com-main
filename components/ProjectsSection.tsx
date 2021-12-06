@@ -24,7 +24,7 @@ export default function ProjectsSection() {
           key={1}
           position="scale(.9) translateY(12px)"
           description="App · Web · Brand"
-          video="/static/videos/slite-cover.mp4"
+          video="slite"
           thumbnail="/static/images/projects/slite/slite-thumbnail.png"
           slug="slite"
           color="#FF99B0"
@@ -40,10 +40,10 @@ export default function ProjectsSection() {
           key={2}
           title="Beyond Translation"
           description="Web"
-          video="/static/videos/bt.mp4"
+          video="bt"
           position="translate(62px, 89px) scale(1.2)"
           slug="beyond-translation"
-          color="#6B5CF7"
+          color="#5F46ED"
         />
         <MotionProject
           variants={childFadeIn}
@@ -55,7 +55,7 @@ export default function ProjectsSection() {
           title="Booli"
           position=" scale(.8)"
           description="Game · Web"
-          video="/static/videos/booli.mp4"
+          video="booli"
           slug="booli"
           color="#FF99B0"
         />

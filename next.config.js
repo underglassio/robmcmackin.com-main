@@ -3,15 +3,10 @@ const withVideos = require('next-videos');
 /**
  * @type {import('next').NextConfig}
  */
-module.exports = withContentlayer()({
+
+const nextConfig = {
   swcMinify: true,
   reactStrictMode: true,
-  images: {
-    domains: [
-      'i.scdn.co', // Spotify Album Art
-      'pbs.twimg.com' // Twitter Profile Picture
-    ]
-  },
   webpack: (config, { dev, isServer }) => {
     // Replace React with Preact only in client production build
     if (!dev && !isServer) {
@@ -22,8 +17,6 @@ module.exports = withContentlayer()({
       });
     }
 
-const nextConfig = {
-  webpack: (config, options) => {
     return config;
   }
 };

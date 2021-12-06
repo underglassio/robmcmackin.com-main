@@ -76,8 +76,16 @@ const FeaturedProjectCard = React.forwardRef(
                         muted
                         style={{ transform: position, borderRadius: 8 }}
                         className="z-10"
-                        src={video}
-                      />
+                      >
+                        <source
+                          src={`/static/videos/${video}.webm`}
+                          type="video/webm"
+                        />
+                        <source
+                          src={`/static/videos/${video}.mp4`}
+                          type="video/mp4"
+                        />
+                      </video>
                     )}
                   </div>
                 </div>
