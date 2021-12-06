@@ -30,7 +30,20 @@ function LoadImage(props) {
 const MDXComponents = {
   Image: LoadImage,
   ImageWithTheme,
-  a: CustomLink
+  a: CustomLink,
+  Video: (props) => (
+    <div>
+      <video
+        {...props}
+        autoPlay
+        playsInline
+        muted
+        controls
+        loop
+        className="block w-full"
+      ></video>
+    </div>
+  )
 };
 
 export default MDXComponents;

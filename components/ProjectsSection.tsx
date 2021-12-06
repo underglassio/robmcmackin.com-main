@@ -22,9 +22,9 @@ export default function ProjectsSection() {
           }}
           title="Slite"
           key={1}
-          position="40px 40px/98%"
+          position="scale(88%) translateY(16px)"
           description="App · Web · Brand"
-          image="/static/images/projects/slite/slite-cover.gif"
+          video="/static/videos/slite-cover.mp4"
           thumbnail="/static/images/projects/slite/slite-thumbnail.png"
           slug="slite"
           color="#ff8cb1"
@@ -39,9 +39,9 @@ export default function ProjectsSection() {
           }}
           key={2}
           title="Beyond Translation"
-          position="-50% -50%/122%"
           description="Web"
-          image="/static/images/projects/bt/bt.gif"
+          video="/static/images/projects/bt/bt.webm"
+          position="translate(62px, 89px) scale(1.2)"
           slug="beyond-translation"
           color="#6046ee"
         />
@@ -53,7 +53,7 @@ export default function ProjectsSection() {
           }}
           key={3}
           title="Booli"
-          position="center 45px/80%"
+          position=" scale(84%)"
           description="Game · Web"
           image="/static/images/projects/booli/booli.gif"
           slug="booli"
