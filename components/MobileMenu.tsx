@@ -13,7 +13,6 @@ export default function MobileMenu() {
       exitDelay: 300
     }
   );
-  const ToggleLink = () => <></>;
 
   function toggleMenu() {
     if (isMenuOpen) {
@@ -39,6 +38,7 @@ export default function MobileMenu() {
         type="button"
         onClick={toggleMenu}
       >
+        mx
         <MenuIcon data-hide={isMenuOpen} />
         <CrossIcon data-hide={!isMenuOpen} />
       </button>
@@ -46,7 +46,7 @@ export default function MobileMenu() {
         <ul
           className={cn(
             styles.menu,
-            'flex flex-col absolute top-16 z-40 bg-cream dark:bg-gray-900',
+            'flex flex-col absolute bg-gray-100 dark:bg-gray-900',
             isMenuRendered && styles.menuRendered
           )}
         >
@@ -54,40 +54,64 @@ export default function MobileMenu() {
             className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
             style={{ transitionDelay: '150ms' }}
           >
-            <Link href="/#projects">
-              <a onClick={toggleMenu} className="flex w-auto pb-4">
-                Projects
-              </a>
+            <Link href="/">
+              <a className="flex w-auto pb-4">Home</a>
             </Link>
           </li>
           <li
             className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
             style={{ transitionDelay: '175ms' }}
           >
-            <Link href="/#writing">
-              <a onClick={toggleMenu} className="flex w-auto pb-4">
-                Writing
-              </a>
+            <Link href="/guestbook">
+              <a className="flex w-auto pb-4">Guestbook</a>
             </Link>
           </li>
           <li
             className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
             style={{ transitionDelay: '200ms' }}
           >
-            <Link href="/#about">
-              <a onClick={toggleMenu} className="flex w-auto pb-4">
-                About
-              </a>
+            <Link href="/dashboard">
+              <a className="flex w-auto pb-4">Dashboard</a>
             </Link>
           </li>
           <li
             className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
             style={{ transitionDelay: '250ms' }}
           >
-            <Link href="mailto:rob.h.mcmackin@gmail.com">
-              <a onClick={toggleMenu} className="flex w-auto pb-4">
-                Contact
-              </a>
+            <Link href="/blog">
+              <a className="flex w-auto pb-4">Blog</a>
+            </Link>
+          </li>
+          <li
+            className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
+            style={{ transitionDelay: '275ms' }}
+          >
+            <Link href="/snippets">
+              <a className="flex w-auto pb-4">Snippets</a>
+            </Link>
+          </li>
+          <li
+            className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
+            style={{ transitionDelay: '300ms' }}
+          >
+            <Link href="/newsletter">
+              <a className="flex w-auto pb-4">Newsletter</a>
+            </Link>
+          </li>
+          <li
+            className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
+            style={{ transitionDelay: '325ms' }}
+          >
+            <Link href="/tweets">
+              <a className="flex w-auto pb-4">Tweets</a>
+            </Link>
+          </li>
+          <li
+            className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
+            style={{ transitionDelay: '350ms' }}
+          >
+            <Link href="/uses">
+              <a className="flex w-auto pb-4">Uses</a>
             </Link>
           </li>
         </ul>
