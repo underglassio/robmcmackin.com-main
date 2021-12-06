@@ -22,7 +22,7 @@ export default function ProjectsSection() {
           }}
           title="Slite"
           key={1}
-          position="scale(88%) translateY(16px)"
+          position="scale(.9) translateY(12px)"
           description="App · Web · Brand"
           video="/static/videos/slite-cover.mp4"
           thumbnail="/static/images/projects/slite/slite-thumbnail.png"
@@ -53,7 +53,7 @@ export default function ProjectsSection() {
           }}
           key={3}
           title="Booli"
-          position=" scale(84%)"
+          position=" scale(.8)"
           description="Game · Web"
           video="/static/videos/booli.mp4"
           slug="booli"
