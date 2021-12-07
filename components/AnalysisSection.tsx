@@ -20,9 +20,9 @@ const AnalysisItem = React.forwardRef(
         href={href}
         className=" transform  pt-4  rounded-md"
       >
-        <div className="mb-3 flex flex-col hover:scale-[1.04] active:scale-[.9] hover:opacity-80 overflow-hidden  transition justify-center items-center rounded-xl pt-3">
+        <div className="mb-3 flex flex-col hover:scale-[1.04] active:scale-[.9] hover:opacity-80 overflow-hidden  transition justify-center items-center rounded-xl">
           <div
-            className="duration-1000 w-full h-[4.8rem] rounded-t-xl bg-cover bg-no-repeat "
+            className="duration-1000 w-full h-[4.7rem] rounded-t-xl bg-cover bg-no-repeat "
             style={{
               backgroundImage: `url("${logo}") `,
               backgroundPositionY: '-0.7rem'
@@ -51,11 +51,11 @@ export default function AnalysisSection() {
       <a className="anchor" id="writing" />
       <div className="py-12 w-full">
         <h2>Writing</h2>
-        <div className="body text-black w-full md:max-w-lg mb-2">
+        <div className="body text-black w-full md:max-w-lg ">
           Exploring how great digital products around the world connect to
           specific&nbsp;niches (or just ridiculously long app-store reviews).
         </div>
-        <div className="grid grid-cols-3 md:grid-cols-6 gap-6 md:gap-2 w-full">
+        <div className="grid grid-cols-3 md:grid-cols-6 gap-6 md:gap-3 w-full">
           <MotionAnalysisItem
             text="Hopper"
             transition={bounceTransition}

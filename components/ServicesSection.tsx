@@ -29,7 +29,7 @@ export default function ServicesSection() {
     <FadeInOnScroll>
       <div className="items-center w-full">
         <h2>I can help you with</h2>
-        <div className="text-black grid grid-cols-3 gap-6 dark:text-cream w-full mt-6 ">
+        <div className="text-black grid grid-cols-3 gap-6 dark:text-cream w-full mt-2">
           <MotionServiceItem
             variants={childFadeIn}
             transition={bounceTransition}
