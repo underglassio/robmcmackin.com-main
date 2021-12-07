@@ -53,7 +53,7 @@ export default function ProjectsSection() {
           }}
           key={3}
           title="Booli"
-          position=" scale(.8)"
+          position=" scale(.8) translateY(16px)"
           description="Game · Web"
           video="booli"
           slug="booli"

@@ -9,7 +9,7 @@ import AboutSection from '../components/AboutSection';
 import { fadeIn } from '../lib/animations';
 import { motion } from 'framer-motion';
 
-const vspace = 'h-14';
+const vspace = 'h-5';
 
 export default function Home() {
   return (
@@ -43,9 +43,8 @@ export default function Home() {
               animate="show"
               initial="hidden"
             >
-              <span className="text-black body mb-2 block">
-                Helping start-ups design digital <br /> products that people
-                love.
+              <span className="text-black w-72 body mb-2 block">
+                Helping start-ups design digital products that people love.
               </span>
             </motion.div>
           </div>
@@ -57,9 +56,9 @@ export default function Home() {
         <AnalysisSection />
         <span className={vspace} />
         <AboutSection />
-        <span className="h-4" />
+        <span className={vspace} />
         <ServicesSection />
-        <span className="h-4" />
+        <span className={vspace} />
       </div>
     </Container>
   );

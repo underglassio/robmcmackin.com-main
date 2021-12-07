@@ -36,9 +36,8 @@ const FeaturedProjectCard = React.forwardRef(
   ) => {
     return (
       <div
-        style={{ transitionTimingFunction: 'cubic-bezier(0.19, 1, 0.22, 1)' }}
         className={cn(
-          'hover:scale-[1.005] active:scale-[1] cursor-pointer col-span-2 md:col-span-1 out-expo duration-1000 transition',
+          'hover:scale-[1.005] hover:opacity-90 active:scale-[1] cursor-pointer col-span-2 md:col-span-1 out-expo transition',
           fullWidth && 'md:col-span-2'
         )}
       >
@@ -78,12 +77,12 @@ const FeaturedProjectCard = React.forwardRef(
                         className="z-10"
                       >
                         <source
-                          src={`/static/videos/${video}.webm`}
-                          type="video/webm"
+                          src={`/static/videos/${video}.mp4`}
+                          type='video/mp4; codecs="hvc1"'
                         />
                         <source
-                          src={`/static/videos/${video}.mp4`}
-                          type="video/mp4"
+                          src={`/static/videos/${video}.webm`}
+                          type="video/webm"
                         />
                       </video>
                     )}

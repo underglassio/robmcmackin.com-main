@@ -18,20 +18,23 @@ const AnalysisItem = React.forwardRef(
         rel="noopener noreferrer"
         ref={ref}
         href={href}
-        className="mr-4 group transform  pt-4  rounded-md"
+        className=" transform  pt-4  rounded-md"
       >
-        <div className="mb-3 flex flex-col justify-center items-center">
+        <div className="mb-3 flex flex-col hover:scale-[1.04] active:scale-[.9] hover:opacity-80 overflow-hidden  transition justify-center items-center rounded-xl pt-3">
           <div
+            className="duration-1000 w-full h-[4.8rem] rounded-t-xl bg-cover bg-no-repeat "
             style={{
-              width: 70,
-              height: 70,
-              transitionTimingFunction: 'cubic-bezier(0.19, 1, 0.22, 1)'
+              backgroundImage: `url("${logo}") `,
+              backgroundPositionY: '-0.7rem'
             }}
-            className="mb-3 group-hover:opacity-80 group-hover:scale-[1.04] group-active:scale-[.9] duration-1000 transition"
           >
-            <Image alt={text} quality={100} src={logo} width={85} height={85} />
+            {/* <Image alt={text} quality={100} src={logo} width={85} height={85} /> */}
           </div>
-          <span className="text-black font-medium text-sm">{text}</span>
+          <div className="w-full bg-black p-1 rounded-b-xl text-center">
+            <span className="text-cream font-bold text-sm tracking-wide">
+              {text}
+            </span>
+          </div>
         </div>
       </a>
     );
@@ -48,11 +51,11 @@ export default function AnalysisSection() {
       <a className="anchor" id="writing" />
       <div className="py-12 w-full">
         <h2>Writing</h2>
-        <div className="body text-black w-full md:max-w-lg mb-6">
-          Discover insights from my exploration into how great digital products
-          around the world connect to specific&nbsp;niches.
+        <div className="body text-black w-full md:max-w-lg mb-2">
+          Exploring how great digital products around the world connect to
+          specific&nbsp;niches (or just ridiculously long app-store reviews).
         </div>
-        <div className="grid grid-cols-4 md:grid-cols-6 gap-4 w-full">
+        <div className="grid grid-cols-3 md:grid-cols-6 gap-6 md:gap-2 w-full">
           <MotionAnalysisItem
             text="Hopper"
             transition={bounceTransition}
@@ -75,7 +78,7 @@ export default function AnalysisSection() {
             href="https://underglass.io/read/Zigzag"
           />
           <MotionAnalysisItem
-            text="Kakao&nbsp;Bank"
+            text="KakaoBank"
             transition={bounceTransition}
             variants={childFadeIn}
             logo="/logos/kakao-bank.png"

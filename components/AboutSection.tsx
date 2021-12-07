@@ -9,7 +9,7 @@ export default function About() {
           <div className="col-span-10 md:col-span-6">
             <a className="anchor" id="about" />
             <h2>Oh hey</h2>
-            <div className="mt-4  body  text-black dark:text-gray-400">
+            <div className="mt-2  body  text-black dark:text-gray-400">
               <p>
                 I'm Rob. I’ve been designing digital stuff for most of my life.
                 I also find myself writing, coding, illustrating, and reminding

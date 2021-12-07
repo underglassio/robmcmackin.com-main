@@ -44,7 +44,7 @@ const Button = ({
   ...props
 }: ButtonProps) => {
   let classes =
-    'flex flex-grow-0 p-2 group text-base font-medium items-center rounded-lg no-wrap transition ';
+    'flex flex-grow-0 p-2 group text-base font-bold items-center rounded-lg no-wrap transition ';
 
   if (primary) {
     classes = [
