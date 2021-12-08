@@ -23,10 +23,10 @@ export default function Footer() {
             I secretly love emails. Why not send me one about the project I can
             help you with?
           </span>
-          <div className="flex flex-col md:flex-row md:items-center">
+          <div className="flex flex-col lg:flex-row lg:items-center">
             <a
               href="mailto:hello@robmcmackin.com"
-              className="bg-gray-700 hover:bg-gray-600 transition-colors text-center font px-4 py-3 rounded-lg inline text-base font-bold mr-4 mb-4 md:mb-0"
+              className="bg-gray-700 hover:bg-gray-600 transition-colors text-center font px-4 py-3 rounded-lg inline text-base font-bold mr-4 mb-4 lg:mb-0"
             >
               hello@robmcmackin.com
             </a>
