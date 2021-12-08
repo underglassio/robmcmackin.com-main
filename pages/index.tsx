@@ -14,8 +14,8 @@ const vspace = 'h-5';
 export default function Home() {
   return (
     <Container>
-      <div className="px-4 md:px-0 pt-8 md:pt-0 flex flex-col justify-center items-start w-full max-w-3xl  mx-auto pb-16">
-        <div className="flex items-center justify-between sm:flex-row w-full relative translate transform-gpu">
+      <div className="px-4 lg:px-0 pt-8 md:pt-0 flex flex-col justify-center items-start w-full max-w-3xl  mx-auto pb-16">
+        <div className="flex items-center justify-between sm:flex-row w-full relative translate transform-gpu overflow-hidden">
           <div>
             <motion.div
               variants={fadeIn}

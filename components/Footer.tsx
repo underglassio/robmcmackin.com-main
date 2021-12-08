@@ -14,7 +14,7 @@ export default function Footer() {
           />
         ))}
       </div>
-      <div className="px-4 md:px-0 w-full max-w-3xl md:flex mx-auto pt-16 pb-20">
+      <div className="px-4 lg:px-0 w-full max-w-3xl md:flex mx-auto pt-16 pb-20">
         <div className="text-2xl md:text-3xl font-black w-full md:w-1/2 leading-tight text-cream pr-2">
           Let's save <br /> the internet.
         </div>

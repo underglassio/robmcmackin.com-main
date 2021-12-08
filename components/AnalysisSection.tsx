@@ -20,9 +20,9 @@ const AnalysisItem = React.forwardRef(
         href={href}
         className=" transform  pt-4  rounded-md"
       >
-        <div className="mb-3 flex flex-col hover:scale-[1.04] active:scale-[.9] hover:opacity-80 overflow-hidden  transition justify-center items-center rounded-xl">
+        <div className="mb-3 flex flex-col max-w-[6rem] hover:scale-[1.04] active:scale-[1.01] hover:opacity-80 overflow-hidden  transition justify-center items-center rounded-xl">
           <div
-            className="duration-1000 w-full h-[4.7rem] rounded-t-xl bg-cover bg-no-repeat "
+            className="duration-1000 w-full h-[3.2rem]  md:h-[4.3rem] rounded-t-xl bg-cover bg-no-repeat "
             style={{
               backgroundImage: `url("${logo}") `,
               backgroundPositionY: '-0.7rem'
@@ -30,8 +30,8 @@ const AnalysisItem = React.forwardRef(
           >
             {/* <Image alt={text} quality={100} src={logo} width={85} height={85} /> */}
           </div>
-          <div className="w-full bg-black p-1 rounded-b-xl text-center">
-            <span className="text-cream font-bold text-sm tracking-wide">
+          <div className="w-full bg-black p-2 rounded-b-xl text-center h-full">
+            <span className="text-cream block font-bold text-sm tracking-wide leading-snug">
               {text}
             </span>
           </div>
@@ -55,7 +55,7 @@ export default function AnalysisSection() {
           Exploring how great digital products around the world connect to
           specific&nbsp;niches (or just ridiculously long app-store reviews).
         </div>
-        <div className="grid grid-cols-3 md:grid-cols-6 gap-6 md:gap-3 w-full">
+        <div className="grid grid-cols-3 md:grid-cols-6 gap-4 md:gap-3 w-full">
           <MotionAnalysisItem
             text="Hopper"
             transition={bounceTransition}
@@ -78,7 +78,7 @@ export default function AnalysisSection() {
             href="https://underglass.io/read/Zigzag"
           />
           <MotionAnalysisItem
-            text="KakaoBank"
+            text="KBank"
             transition={bounceTransition}
             variants={childFadeIn}
             logo="/logos/kakao-bank.png"
