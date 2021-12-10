@@ -16,13 +16,18 @@ export default function About() {
                 coding, illustrating for fun.
               </p>
               <p className="mt-4">
-                My most recent role was at <a href="http://slite.com">Slite</a>,
-                a writing tool for remote teams.
-              </p>
-              <p className="mt-4">
-                Before that, I had a 3-year stint in the startup world of Seoul.
-                I also designed apps for elder care workers at IBM Design &
-                Watson Health.
+                My most recent role was at{' '}
+                <a
+                  className="underline"
+                  target="_blank"
+                  href="http://slite.com"
+                  rel="noreferrer"
+                >
+                  Slite
+                </a>
+                , a writing tool for remote teams. Before that, I had a 3-year
+                stint in the startup world of Seoul. I also designed apps for
+                elder care workers at IBM Design & Watson Health.
               </p>
               <p className="mt-4">
                 I'm originally from Dublin and live and work in Berlin.

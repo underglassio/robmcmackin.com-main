@@ -52,6 +52,10 @@ body {
   flex-shrink: 0;
 }
 
+a {
+  @apply text-primary;
+}
+
 #__next {
   @apply bg-cream dark:bg-gray-900;
   height: 100%;

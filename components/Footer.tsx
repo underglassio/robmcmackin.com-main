@@ -26,7 +26,7 @@ export default function Footer() {
           <div className="flex flex-col lg:flex-row lg:items-center">
             <a
               href="mailto:hello@robmcmackin.com"
-              className="bg-gray-700 hover:bg-gray-600 transition-colors text-center font px-4 py-3 rounded-lg inline text-base font-bold mr-4 mb-4 lg:mb-0"
+              className="bg-gray-700 hover:bg-gray-600 text-cream transition-colors text-center font px-4 py-3 rounded-lg inline text-base no-underline  font-bold mr-4 mb-4 lg:mb-0"
             >
               hello@robmcmackin.com
             </a>
