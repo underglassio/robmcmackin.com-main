@@ -20,17 +20,19 @@ const AnalysisItem = React.forwardRef(
         href={href}
         className=" transform  pt-4  rounded-md"
       >
-        <div className="mb-3 flex flex-col max-w-[6rem] hover:scale-[1.04] active:scale-[1.01] hover:opacity-80 overflow-hidden  transition justify-center items-center rounded-xl">
-          <div
-            className="duration-1000 w-full h-[3.2rem]  md:h-[4.3rem] rounded-t-xl bg-cover bg-no-repeat "
-            style={{
-              backgroundImage: `url("${logo}") `,
-              backgroundPositionY: '-0.7rem'
-            }}
-          >
-            {/* <Image alt={text} quality={100} src={logo} width={85} height={85} /> */}
+        <div className="mb-3 flex flex-col w-[5rem] md:w-[5.9rem]  relative hover:scale-[1.04] active:scale-[1.01] hover:opacity-80 overflow-hidden transition justify-center items-center rounded-xl">
+          <div className="h-[4.5rem]  w-[5rem] md:h-[5.4rem] md:w-[5.9rem]">
+            <Image
+              alt={text}
+              quality={100}
+              className="block"
+              src={logo}
+              width="5.9rem"
+              height="5.4rem"
+              layout="responsive"
+            />
           </div>
-          <div className="w-full bg-black p-2 rounded-b-xl text-center h-full">
+          <div className="w-full bg-black p-2 rounded-b-xl text-center z-40 h-full">
             <span className="text-cream block font-bold text-sm tracking-wide leading-snug">
               {text}
             </span>
@@ -52,8 +54,8 @@ export default function AnalysisSection() {
       <div className="py-12 w-full">
         <h2>Writing</h2>
         <div className="body text-black w-full md:max-w-lg ">
-          Exploring how great digital products around the world connect to
-          specific&nbsp;niches (or just ridiculously long app-store reviews).
+          Exploring how great digital products around the world use to design to
+          connect to their audience.
         </div>
         <div className="grid grid-cols-3 md:grid-cols-6 gap-4 md:gap-3 w-full">
           <MotionAnalysisItem

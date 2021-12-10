@@ -12,7 +12,7 @@ type ServiceProps = React.PropsWithChildren<{
 const ServiceItem = React.forwardRef(
   ({ title, description }: ServiceProps, ref?: any) => {
     return (
-      <div ref={ref} className="mb-8 col-span-3 md:col-span-1">
+      <div ref={ref} className="mb-2 md:mb-0 col-span-3 md:col-span-1">
         <h3 className="font-bold text-base mb-1">{title}</h3>
         <span className="body leading-tight">{description}</span>
       </div>
@@ -29,7 +29,7 @@ export default function ServicesSection() {
     <FadeInOnScroll>
       <div className="items-center w-full">
         <h2>I can help you with</h2>
-        <div className="text-black grid grid-cols-3 gap-6 dark:text-cream w-full mt-2">
+        <div className="text-black grid grid-cols-3 gap-6 dark:text-cream w-full mt-3">
           <MotionServiceItem
             variants={childFadeIn}
             transition={bounceTransition}

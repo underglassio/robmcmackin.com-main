@@ -19,7 +19,7 @@ export default function Footer() {
           Let's save <br /> the internet.
         </div>
         <div className="w-full md:w-1/2">
-          <span className="text-left body font-mono select-none text-cream mb-6 block mt-4 md:mt-0">
+          <span className="text-left body font-mono select-none text-cream mb-6 block mt-2 md:mt-0">
             I secretly love emails. Why not send me one about the project I can
             help you with?
           </span>

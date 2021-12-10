@@ -16,7 +16,7 @@ export default function ProjectLayout({
     // type="article"
     >
       <div
-        className="w-full mt-[-2] md:h-[70vw] lg:h-[50vw] xl:h-[50vw] 2xl:h-[34vw] pt-8"
+        className="w-full h-0 p-0 md:h-[70vw] lg:h-[50vw] xl:h-[50vw] 2xl:h-[34vw] md:pt-8"
         style={{ backgroundColor: post.color }}
       >
         <div
