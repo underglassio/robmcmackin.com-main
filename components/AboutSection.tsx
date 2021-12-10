@@ -11,21 +11,22 @@ export default function About() {
             <h2>Oh hey</h2>
             <div className="mt-2  body  text-black dark:text-gray-400">
               <p>
-                I'm Rob. I’ve been designing digital stuff for most of my life.
-                I also find myself writing, coding, illustrating, and reminding
-                myself that being a generalist is fine.
+                I'm Rob. I’ve been designing things on the internet for most of
+                my life, and now do it for clients. I also find myself writing,
+                coding, illustrating for fun.
               </p>
               <p className="mt-4">
                 My most recent role was at <a href="http://slite.com">Slite</a>,
-                a writing tool for remote teams. We were remote before it was{' '}
-                <s>cool</s> necessitated by a pandemic.
+                a writing tool for remote teams.
               </p>
               <p className="mt-4">
                 Before that, I had a 3-year stint in the startup world of Seoul.
                 I also designed apps for elder care workers at IBM Design &
                 Watson Health.
               </p>
-              <p className="mt-4">Originally from Dublin, now in Berlin.</p>
+              <p className="mt-4">
+                I'm originally from Dublin and live and work in Berlin.
+              </p>
             </div>
           </div>
           <div className="col-span-10 md:col-span-4 hidden md:flex items-center justify-center md:justify-end relative pt-8">
