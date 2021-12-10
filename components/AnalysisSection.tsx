@@ -20,14 +20,14 @@ const AnalysisItem = React.forwardRef(
         href={href}
         className=" transform  pt-4  rounded-md"
       >
-        <div className="mb-1 flex flex-col md:w-[100%] hover:scale-[1.04] active:scale-[1.01] hover:opacity-80 overflow-hidden transition justify-center items-center rounded-xl">
-          <Image
-            alt={text}
-            quality={100}
-            src={logo}
-            width="5.4rem"
-            height="5.4rem"
-          />
+        <div className="mb-3 flex flex-col w-[5rem] md:w-[5.9rem]  relative hover:scale-[1.04] active:scale-[1.01] hover:opacity-80 overflow-hidden transition justify-center items-center rounded-xl">
+          <div
+            className="duration-1000 w-full h-[3.2rem]  md:h-[4.3rem] rounded-t-xl bg-cover bg-no-repeat "
+            style={{
+              backgroundImage: `url("${logo}") `,
+              backgroundPositionY: '-0.7rem'
+            }}
+          ></div>
           <div className="w-full bg-black p-2 rounded-b-xl text-center z-40 h-full">
             <span className="text-cream block font-bold text-sm tracking-wide leading-snug">
               {text}
