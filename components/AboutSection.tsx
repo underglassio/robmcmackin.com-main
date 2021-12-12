@@ -12,8 +12,8 @@ export default function About() {
             <div className="mt-2  body  text-black dark:text-gray-400">
               <p>
                 I'm Rob. I’ve been designing things on the internet for most of
-                my life, and now do it for clients. I also find myself writing,
-                coding, illustrating for fun.
+                my life, and now do it for clients. For fun I also write, code,
+                illustrate and remind myself that being a generalist is fine.
               </p>
               <p className="mt-4">
                 My most recent role was at{' '}
@@ -29,9 +29,7 @@ export default function About() {
                 stint in the startup world of Seoul. I also designed apps for
                 elder care workers at IBM Design & Watson Health.
               </p>
-              <p className="mt-4">
-                I'm originally from Dublin and live and work in Berlin.
-              </p>
+              <p className="mt-4">I'm from Ireland, and now based in Berlin.</p>
             </div>
           </div>
           <div className="col-span-10 md:col-span-4 hidden md:flex items-center justify-center md:justify-end relative pt-8">
