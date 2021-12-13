@@ -50,7 +50,7 @@ const FeaturedProjectCard = React.forwardRef(
                 <div className="flex transition-opacity relative ">
                   {thumbnail && (
                     <div
-                      className="md:hidden absolute w-full h-full z-30"
+                      className="md:hidden rounded-t-xl overflow-hidden absolute w-full h-full z-30"
                       style={{
                         background: `url(${thumbnail}) no-repeat center/contain ${color}`
                       }}
