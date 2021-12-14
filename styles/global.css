@@ -83,7 +83,7 @@ a {
 
 .body,
 .prose p {
-  @apply font-mono leading-normal  text-base md:text-sm;
+  @apply font-mono leading-[1.4rem]  text-sm md:text-sm;
 }
 
 .prose .anchor {
