@@ -58,7 +58,7 @@ export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const { ...customMeta } = pageProps;
   const meta = {
-    title: 'Rob McMackin – Digital Product Design, branding, writing.',
+    title: 'Rob McMackin – Digital Product Design and Branding.',
     description: `Helping Startups with Product Design, Branding, Copywriting, and Illustration.`,
     image: 'https://robmcmackin.com/static/images/banner.png',
     type: 'website',

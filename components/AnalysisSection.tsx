@@ -50,7 +50,7 @@ export default function AnalysisSection() {
       <div className="py-12 w-full">
         <h2>Writing</h2>
         <div className="body text-black w-full md:max-w-lg ">
-          Exploring how great digital products around the world use design to
+          Exploring how great product teams around the world use design to
           connect with their audience.
         </div>
         <div className="grid grid-cols-3 md:grid-cols-6 gap-4 md:gap-3 w-full">
