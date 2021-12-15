@@ -33,6 +33,11 @@ export default function Document(props) {
           href="/static/favicons/safari-pinned-tab.svg"
           rel="mask-icon"
         />
+        <script
+          defer
+          data-domain="robmcmackin.com"
+          src="https://plausible.io/js/plausible.js"
+        ></script>
         <meta content="#ffffff" name="theme-color" />
         <meta content="#ffffff" name="msapplication-TileColor" />
         <meta
