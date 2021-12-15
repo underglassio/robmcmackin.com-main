@@ -59,7 +59,7 @@ export default function App({ Component, pageProps }: AppProps) {
   const { ...customMeta } = pageProps;
   const meta = {
     title: 'Rob McMackin – Digital Product Design and Branding',
-    description: `Helping to make digital stuff that people love.`,
+    description: `Helping innovative companies design digital products that people love.`,
     image: 'https://robmcmackin.com/static/images/banner.png',
     type: 'website',
     ...customMeta
