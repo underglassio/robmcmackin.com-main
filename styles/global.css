@@ -101,7 +101,7 @@ a {
 }
 
 .prose a {
-  @apply transition-all;
+  @apply transition-all text-primary;
 }
 
 .prose .anchor:after {
