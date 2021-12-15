@@ -66,7 +66,7 @@ export default function App({ Component, pageProps }: AppProps) {
   };
 
   return (
-    <SessionProvider session={pageProps.session}>
+    <>
       <Head>
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
@@ -146,6 +146,6 @@ export default function App({ Component, pageProps }: AppProps) {
           <Component {...pageProps} />
         </motion.main>
       </AnimatePresence>
-    </SessionProvider>
+    </>
   );
 }
