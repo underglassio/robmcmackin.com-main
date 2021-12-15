@@ -87,6 +87,12 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@robbmcm" />
         <meta name="twitter:title" content={meta.title} />
+        <script
+          defer
+          data-domain="robmcmackin.com"
+          src="https://plausible.io/js/plausible.js"
+        ></script>
+
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />
         {meta.date && (
