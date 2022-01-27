@@ -55,7 +55,7 @@ export default function ServicesSection() {
             />
           </div>
 
-          <div className="col-span-1 flex place-items-center justify-end">
+          <div className="col-span-1 flex place-items-center justify-end md:pr-8">
             <HeroAnimation />
           </div>
         </div>

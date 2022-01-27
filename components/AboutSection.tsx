@@ -5,7 +5,7 @@ export default function About() {
   return (
     <>
       <FadeInOnScroll className="w-full">
-        <div className="flex-col leading-standard text-base justify-center items-start max-w-3xl mx-auto mb-16 grid grid-cols-10 gap-4">
+        <div className="flex-col leading-standard text-base justify-center items-center max-w-3xl mx-auto mb-16 grid grid-cols-10 gap-4">
           <div className="col-span-10 md:col-span-6">
             <a className="anchor" id="about" />
             <h2>Oh hey</h2>
@@ -34,21 +34,21 @@ export default function About() {
             </div>
           </div>
           <div className="col-span-10 md:col-span-4 hidden md:flex items-center justify-end md:justify-end relative pt-3">
-            <Image
+            {/* <Image
               alt="me"
               src="/me.png"
               quality={100}
-              width={315}
-              height={316.7}
-            />
-            {/* <Image
+              width={630}
+              height={633.4}
+            /> */}
+            <Image
               alt="Rob McMackin Portrait"
-              src="/rob1.jpg"
+              src="/rob.jpg"
               className="rounded-xl"
               quality={100}
               width={857}
               height={1200}
-            /> */}
+            />
           </div>
         </div>
       </FadeInOnScroll>

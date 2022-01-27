@@ -31,8 +31,8 @@ const appFadeIn = {
 export default function HeroAnimation() {
   return (
     <div
-      style={{ width: 364, height: 364 }}
-      className="hidden md:flex justify-end w-full items-center relative"
+      style={{ width: 364, height: 364, transform: 'scale(1.2)' }}
+      className="hidden md:flex justify-center w-full items-center relative"
     >
       <motion.div
         variants={tabletFadeIn}
@@ -100,7 +100,7 @@ export default function HeroAnimation() {
           height={175.78}
         />
       </motion.div>
-      <div style={{ bottom: 0, right: 0 }} className="absolute z-0">
+      <div style={{ bottom: 0, right: 0 }} className="absolute z-0 opacity-0">
         <Image
           alt="Portal"
           layout="fixed"
