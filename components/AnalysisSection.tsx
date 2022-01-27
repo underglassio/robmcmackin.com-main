@@ -108,6 +108,7 @@ export default function AnalysisSection() {
           >
             <>More analysis</>
           </Button>
+          <a className="anchor" id="about" />
         </div>
       </div>
     </FadeInOnScroll>
