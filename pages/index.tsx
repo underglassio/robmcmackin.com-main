@@ -26,7 +26,7 @@ export default function Home() {
             animate="show"
             initial="hidden"
           >
-            <span className="text-black font-normal md:pr-8 md:max-w-[26rem] text-xl block">
+            <span className="text-black font-normal md:pr-8 md:max-w-[26rem] leading-standard text-lg md:text-xl block">
               I help startups design digital products that people love.
             </span>
           </motion.div>

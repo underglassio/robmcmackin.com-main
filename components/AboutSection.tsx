@@ -12,8 +12,9 @@ export default function About() {
             <div className="mt-2  body prose text-black dark:text-gray-400">
               <p>
                 I'm Rob. I’ve been designing things on the internet for most of
-                my life, and now do it for clients. For fun I also write, code,
-                illustrate and remind myself that being a generalist is fine.
+                my life, and now do it for clients. I like to build my ideas, so
+                have a broad skillset, but work best on product strategy,
+                usability and branding.
               </p>
               <p className="mt-4">
                 My most recent role was at{' '}
@@ -40,6 +41,14 @@ export default function About() {
               width={315}
               height={316.7}
             />
+            {/* <Image
+              alt="Rob McMackin Portrait"
+              src="/rob1.jpg"
+              className="rounded-xl"
+              quality={100}
+              width={857}
+              height={1200}
+            /> */}
           </div>
         </div>
       </FadeInOnScroll>

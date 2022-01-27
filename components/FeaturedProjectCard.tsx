@@ -64,7 +64,7 @@ const FeaturedProjectCard = React.forwardRef(
                     }}
                     className={cn(
                       'bg-cream transition-opacity rounded-t-xl overflow-hidden h- w-full z-20',
-                      tall ? ' h-98 md:h-94' : 'h-108 h-98'
+                      tall ? ' h-72 md:h-98' : 'h-72 md:h-98'
                     )}
                   >
                     {' '}
