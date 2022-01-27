@@ -12,9 +12,9 @@ export default function About() {
             <div className="mt-2  body prose text-black dark:text-gray-400">
               <p>
                 I'm Rob. I’ve been designing things on the internet for most of
-                my life, and now do it for clients. I like to build my ideas, so
-                have a broad skillset, but work best on product strategy,
-                usability and branding.
+                my life, and now do it for clients. I like to build my ideas and
+                so have a broad skillset, but naturally fit best with product
+                strategy, usability and branding.
               </p>
               <p className="mt-4">
                 My most recent role was at{' '}

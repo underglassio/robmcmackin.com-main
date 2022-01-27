@@ -9,7 +9,7 @@ import AboutSection from '../components/AboutSection';
 import { fadeIn } from '../lib/animations';
 import { motion } from 'framer-motion';
 
-const vspace = 'h-8';
+const vspace = 'h-6';
 
 export default function Home() {
   return (
