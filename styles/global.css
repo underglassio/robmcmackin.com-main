@@ -8,6 +8,12 @@
   src: url(/fonts/GT-Walsheim-Regular.woff2) format('woff2'),
     url(/fonts/GT-Walsheim-Regular.woff) format('woff');
 }
+@font-face {
+  font-family: 'GT Walsheim';
+  font-weight: 500;
+  src: url(/fonts/GT-Walsheim-Medium.woff2) format('woff2'),
+    url(/fonts/GT-Walsheim-Medium.woff) format('woff');
+}
 
 @font-face {
   font-family: 'GT Walsheim';
@@ -168,7 +174,7 @@ table {
 }
 h2,
 .prose h2 {
-  @apply font-bold text-lg mb-2 leading-normal text-black dark:text-white;
+  @apply font-bold text-lg mb-4 leading-normal text-black dark:text-white;
 }
 .prose h2 {
   @apply mb-4;

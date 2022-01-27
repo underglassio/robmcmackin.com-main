@@ -64,7 +64,7 @@ const FeaturedProjectCard = React.forwardRef(
                     }}
                     className={cn(
                       'bg-cream transition-opacity rounded-t-xl overflow-hidden h- w-full z-20',
-                      tall ? 'h-80 md:h-94' : 'h-80'
+                      tall ? ' h-98 md:h-94' : 'h-108 h-98'
                     )}
                   >
                     {' '}
@@ -91,7 +91,7 @@ const FeaturedProjectCard = React.forwardRef(
                 <div className="w-full"></div>
                 <div className="w-full flex bg-black rounded-b-xl dark:bg-cream justify-between items-center pt-3 z-40  pb-2.5 px-4 text-cream dark:text-gray-700">
                   <h4 className="font-sans text-base font-bold">{title}</h4>
-                  <span className="font-mono text-sm">{description}</span>
+                  <span className=" font-mono text-sm">{description}</span>
                 </div>
               </div>
             </a>

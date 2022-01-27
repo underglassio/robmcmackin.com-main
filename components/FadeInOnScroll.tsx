@@ -24,7 +24,7 @@ export default function FadeInOnScroll({ children, className }: props) {
       variants={containerFadeIn}
       initial="hidden"
       animate={controls}
-      className={cn('transform-gpu ', className)}
+      className={cn('transform-gpu w', className)}
     >
       {children}
     </motion.div>

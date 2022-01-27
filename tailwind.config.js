@@ -43,7 +43,7 @@ module.exports = {
       fontSize: {
         xsm: '.694rem',
         sm: '.9rem',
-        base: '20px',
+        base: '21px',
         md: '1.2rem',
         lg: '1.44rem',
         xl: '1.72rem',
@@ -80,7 +80,10 @@ module.exports = {
         floating: 'floating 4s infinite ease-in-out'
       },
       maxWidth: {
-        '3xl': '42rem'
+        '3xl': '56rem'
+      },
+      height: {
+        98: '26rem'
       },
       typography: (theme) => ({
         DEFAULT: {

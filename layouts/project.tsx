@@ -29,7 +29,7 @@ export default function ProjectLayout({
           {post.title}
         </h1>
         <div className="flex flex-col items-start justify-between w-full md:flex-row md:items-center">
-          <div className="flex items-center text-sm font-mono font-medium text-gray-700">
+          <div className="flex items-center text-sm font-medium text-gray-700">
             {post.role}
             {/* {` · `}
             {post.date} */}

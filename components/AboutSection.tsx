@@ -4,12 +4,12 @@ import FadeInOnScroll from './FadeInOnScroll';
 export default function About() {
   return (
     <>
-      <FadeInOnScroll>
+      <FadeInOnScroll className="w-full">
         <div className="flex-col leading-standard text-base justify-center items-start max-w-3xl mx-auto mb-16 grid grid-cols-10 gap-4">
           <div className="col-span-10 md:col-span-6">
             <a className="anchor" id="about" />
             <h2>Oh hey</h2>
-            <div className="mt-2  body  text-black dark:text-gray-400">
+            <div className="mt-2  body prose text-black dark:text-gray-400">
               <p>
                 I'm Rob. I’ve been designing things on the internet for most of
                 my life, and now do it for clients. For fun I also write, code,
@@ -32,7 +32,7 @@ export default function About() {
               <p className="mt-4">I'm from Ireland, and now based in Berlin.</p>
             </div>
           </div>
-          <div className="col-span-10 md:col-span-4 hidden md:flex items-center justify-center md:justify-end relative pt-8">
+          <div className="col-span-10 md:col-span-4 hidden md:flex items-center justify-end md:justify-end relative pt-3">
             <Image
               alt="me"
               src="/me.png"

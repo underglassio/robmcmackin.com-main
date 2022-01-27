@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { scaleCorrectors } from 'framer-motion/types/projection/styles/scale-correction';
 import Image from 'next/image';
 
 const phoneFadeIn = {
@@ -32,7 +31,7 @@ const appFadeIn = {
 export default function HeroAnimation() {
   return (
     <div
-      style={{ width: 364, height: 364, transform: 'scale(.9)' }}
+      style={{ width: 364, height: 364 }}
       className="hidden md:flex justify-end w-full items-center relative"
     >
       <motion.div
