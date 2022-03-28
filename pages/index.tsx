@@ -20,7 +20,7 @@ export default function Home() {
             variants={fadeIn}
             transition={{
               y: { type: 'spring', bounce: 0.3, duration: 1.7 },
-              duration: 0.4,
+              duration: 0.3,
               delay: 0.05
             }}
             animate="show"

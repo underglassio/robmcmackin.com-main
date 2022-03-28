@@ -21,7 +21,7 @@ export default function Footer() {
         <div className="w-full flex md:w-1/2 ">
           <div>
             <span className="text-left body select-none text-cream mb-3 block mt-2 md:mt-0">
-              I have some availability for freelance.
+              I may have some availability.
               <br /> And secretly love emails. 👇
             </span>
             <div className="flex flex-col lg:flex-row lg:items-center">

@@ -20,7 +20,7 @@ const AnalysisItem = React.forwardRef(
         href={href}
         className=" transform  pt-4  rounded-md"
       >
-        <div className="mb-3 flex flex-col w-[5rem] md:w-[7.9rem]  relative hover:scale-[1.04] active:scale-[1.01] hover:opacity-80 overflow-hidden transition justify-center items-center rounded-xl">
+        <div className="mb-3 flex flex-col w-[5rem] md:w-[7.9rem]  relative hover:scale-[1.02] active:scale-[1.01] hover:opacity-80 overflow-hidden transition justify-center items-center rounded-xl">
           <div
             className="duration-1000 w-full h-[3.2rem]  md:h-[6.3rem] rounded-t-xl bg-cover bg-no-repeat "
             style={{
