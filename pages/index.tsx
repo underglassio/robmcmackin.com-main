@@ -21,7 +21,7 @@ export default function Home() {
         const r = el.getBoundingClientRect();
         window.top.scroll({
           top: pageYOffset + r.top,
-          behavior: 'smooth'
+          behavior: 'auto'
         });
       }, 600);
     }
