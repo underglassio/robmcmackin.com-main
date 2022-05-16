@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Container from '../components/Container';
 import AnalysisSection from '../components/AnalysisSection';
 import ServicesSection from '../components/ServicesSection';
@@ -12,20 +12,24 @@ import { motion } from 'framer-motion';
 const vspace = 'h-6';
 
 export default function Home() {
+  const [path, setPath] = useState(null);
+
+  useEffect(() => {
+    const path1 = window.location.hash;
+    if (path != path1) {
+      setPath(path1);
+    }
+  });
+
   useEffect(() => {
     const path = window.location.hash;
     if (path && path.includes('#')) {
-      setTimeout(() => {
-        const id = path.replace('#', '');
-        const el = window.document.getElementById(id);
-        const r = el.getBoundingClientRect();
-        window.top.scroll({
-          top: pageYOffset + r.top,
-          behavior: 'auto'
-        });
-      }, 600);
+      const id = path.replace('#', '');
+      if (id) {
+        document.querySelector('#' + id).scrollIntoView({ behavior: 'auto' });
+      }
     }
-  });
+  }, [path]);
   return (
     <Container>
       <div className="px-4 lg:px-0 pt-8 md:pt-0 flex flex-col justify-center items-start w-full  max-w-3xl  mx-auto pb-16">

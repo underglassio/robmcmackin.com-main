@@ -55,7 +55,10 @@ export default function MobileMenu() {
             style={{ transitionDelay: '150ms' }}
           >
             <Link href="/#projects">
-              <a onClick={toggleMenu} className="flex w-auto pb-4">
+              <a
+                onClick={toggleMenu}
+                className="flex text-black visited: w-auto pb-4"
+              >
                 Projects
               </a>
             </Link>
@@ -65,7 +68,7 @@ export default function MobileMenu() {
             style={{ transitionDelay: '175ms' }}
           >
             <Link href="/#writing">
-              <a onClick={toggleMenu} className="flex w-auto pb-4">
+              <a onClick={toggleMenu} className="flex text-black w-auto pb-4">
                 Writing
               </a>
             </Link>
@@ -75,7 +78,7 @@ export default function MobileMenu() {
             style={{ transitionDelay: '200ms' }}
           >
             <Link href="/#about">
-              <a onClick={toggleMenu} className="flex w-auto pb-4">
+              <a onClick={toggleMenu} className="flex text-black w-auto pb-4">
                 About
               </a>
             </Link>
@@ -85,7 +88,7 @@ export default function MobileMenu() {
             style={{ transitionDelay: '250ms' }}
           >
             <Link href="mailto:rob.h.mcmackin@gmail.com">
-              <a onClick={toggleMenu} className="flex w-auto pb-4">
+              <a onClick={toggleMenu} className="flex text-black w-auto pb-4">
                 Contact
               </a>
             </Link>

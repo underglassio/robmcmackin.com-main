@@ -1,17 +1,18 @@
 import 'styles/global.css';
-
-import Image from 'next/image';
+import { useState } from 'react';
+import EmailIcon from 'public/EmailIcon.svg';
+import CopyIcon from 'public/CopyIcon.svg';
+import TwitterIconSm from 'public/TwitterIconSm.svg';
 import NextLink from 'next/link';
 import FadeInOnScroll from 'components/FadeInOnScroll';
 import cn from 'classnames';
 import NextNProgress from 'nextjs-progressbar';
 import MobileMenu from 'components/MobileMenu';
 import type { AppProps } from 'next/app';
+import React from 'react';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
-import Button from 'components/Button';
-import { SessionProvider } from 'next-auth/react';
 import { useRouter } from 'next/router';
-// import { useAnalytics } from 'lib/analytics';
 import Head from 'next/head';
 
 import { motion, AnimatePresence } from 'framer-motion';
@@ -43,7 +44,7 @@ const handExitComplete = (): void => {
   }
 };
 
-function NavItem({ href, text }) {
+function NavItem({ href = '', text }) {
   return (
     <NextLink passHref href={href}>
       <a className="text-black hover:text-gray-600 font-medium hidden md:inline-block px-3 text-sm transition-all cursor-pointer mt-[1px]">
@@ -57,12 +58,22 @@ export default function App({ Component, pageProps }: AppProps) {
   // useAnalytics();
   const router = useRouter();
   const { ...customMeta } = pageProps;
+
   const meta = {
     title: 'Rob McMackin – Digital Product Design and Branding',
     description: `Helping innovative companies design digital products that people love.`,
     image: 'https://robmcmackin.com/static/images/banner.png',
     type: 'website',
     ...customMeta
+  };
+  const [contactOpen, setContactOpen] = useState(false);
+  const [copied, setCopied] = useState(false);
+
+  const onCopy = () => {
+    setCopied(true);
+    setTimeout(() => {
+      setCopied(false);
+    }, 600);
   };
 
   return (
@@ -99,6 +110,14 @@ export default function App({ Component, pageProps }: AppProps) {
           <meta property="article:published_time" content={meta.date} />
         )}
       </Head>
+      <div
+        onClick={() => setContactOpen(false)}
+        className={cn(
+          contactOpen
+            ? 'block fixed overflow-y-auto w-full min-h-full opacity-0 z-50'
+            : 'hidden'
+        )}
+      />
       <FadeInOnScroll>
         <div className="flex flex-col justify-center px-4">
           <nav className="flex items-center justify-between w-full z-50 sticky md:max-w-3xl border-gray-200 dark:border-gray-700 mx-auto py-6  text-gray-900 bg-cream  dark:bg-gray-900 bg-opacity-60 dark:text-gray-100">
@@ -127,14 +146,79 @@ export default function App({ Component, pageProps }: AppProps) {
                 </a>
               </NextLink>
               <MobileMenu />
-              <div className="hidden md:block">
+              <div className="hidden md:flex relative">
                 <NavItem href="/#projects" text="Projects" />
                 <NavItem href="/#writing" text="Writing" />
                 <NavItem href="/#about" text="About" />
-                <NavItem
-                  href="mailto:rob.h.mcmackin@gmail.com"
-                  text="Contact"
-                />
+                <div className="my-[0.1em] border-l border-gray-300 mx-3" />
+                <div
+                  onClick={() => setContactOpen(!contactOpen)}
+                  className="text-black hover:text-gray-600 font-medium px-3 text-sm transition-all cursor-pointer mt-[1px] flex place-items-center"
+                >
+                  <div className="mr-2">Contact</div>
+                  <div className="mt-[1px] fill-current">
+                    <svg
+                      width="11"
+                      height="7"
+                      viewBox="0 0 11 7"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M10.4048 0.292521C10.7953 0.683045 10.7953 1.31621 10.4048 1.70673L6.16218 5.94937C5.77166 6.3399 5.1385 6.3399 4.74797 5.94937L0.505331 1.70673C0.114806 1.31621 0.114806 0.683045 0.505331 0.292521C0.895855 -0.0980034 1.52902 -0.0980035 1.91954 0.292521L5.45508 3.82805L8.99061 0.292521C9.38114 -0.0980035 10.0143 -0.0980034 10.4048 0.292521Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  className={cn(
+                    contactOpen ? 'opacity-100 top-7' : 'opacity-0 top-8',
+                    'absolute transition-all right-0 shadow-md border border-gray-200 px-2 py-3 rounded-md text-black bg-gray-100 space-y-2'
+                  )}
+                >
+                  <div className="text-black hover:text-gray-600 cursor-pointer font-medium px-3 text-sm flex place-items-center ">
+                    <span className="text-gray-400 mr-2">
+                      <EmailIcon />
+                    </span>
+                    <CopyToClipboard
+                      onCopy={() => onCopy()}
+                      text="hello@robmcmackin.com"
+                    >
+                      <span className="flex place-items-center relative">
+                        <div
+                          id="tooltip-default"
+                          role="tooltip"
+                          className={cn(
+                            copied
+                              ? 'left-[-7.7rem] opacity-100'
+                              : 'left-[-7.5rem] opacity-0',
+                            'absolute  z-10 py-1 px-2 text-sm font-normal text-white bg-black rounded-lg shadow-md transition-all duration-300 tooltip dark:bg-gray-700'
+                          )}
+                        >
+                          Copied!
+                        </div>
+                        <span className=" mr-[.4rem]">
+                          hello@robmcmackin.com
+                        </span>
+                        <CopyIcon />
+                      </span>
+                    </CopyToClipboard>
+                  </div>
+                  <a
+                    className="text-black hover:text-gray-600 font-medium px-3 text-sm transition-all cursor-pointer mt-[1px] flex place-items-center"
+                    href="https://www.twitter.com/robbmcm"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span className="text-gray-400 mr-2">
+                      <TwitterIconSm />
+                    </span>
+                    Twitter
+                  </a>
+                </div>
               </div>
             </div>
           </nav>
