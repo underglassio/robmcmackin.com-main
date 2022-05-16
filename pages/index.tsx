@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Container from '../components/Container';
 import AnalysisSection from '../components/AnalysisSection';
 import ServicesSection from '../components/ServicesSection';
@@ -12,10 +12,24 @@ import { motion } from 'framer-motion';
 const vspace = 'h-6';
 
 export default function Home() {
+  useEffect(() => {
+    const path = window.location.hash;
+    if (path && path.includes('#')) {
+      setTimeout(() => {
+        const id = path.replace('#', '');
+        const el = window.document.getElementById(id);
+        const r = el.getBoundingClientRect();
+        window.top.scroll({
+          top: pageYOffset + r.top,
+          behavior: 'smooth'
+        });
+      }, 600);
+    }
+  });
   return (
     <Container>
       <div className="px-4 lg:px-0 pt-8 md:pt-0 flex flex-col justify-center items-start w-full  max-w-3xl  mx-auto pb-16">
-        <div className="flex items-end justify-between sm:flex-row w-full relative translate md:h-[11rem] transform-gpu overflow-hidden">
+        <div className="flex items-end justify-between sm:flex-row w-full relative translate md:h-[7rem] transform-gpu overflow-hidden">
           <motion.div
             variants={fadeIn}
             transition={{

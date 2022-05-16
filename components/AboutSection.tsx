@@ -5,7 +5,10 @@ export default function About() {
   return (
     <>
       <FadeInOnScroll className="w-full">
-        <div className="flex-col leading-standard text-base justify-center items-center max-w-3xl mx-auto mb-16 grid grid-cols-10 gap-4">
+        <div
+          id="about"
+          className="flex-col leading-standard text-base justify-center items-center max-w-3xl mx-auto mb-16 grid grid-cols-10 gap-4"
+        >
           <div className="col-span-10 md:col-span-6">
             <h2>Oh hey</h2>
             <div className="mt-2  body prose text-black dark:text-gray-400">
