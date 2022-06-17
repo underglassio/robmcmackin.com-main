@@ -60,6 +60,10 @@ body {
 
 a {
   @apply text-primary;
+  text-decoration: none;
+}
+a:hover {
+  @apply text-primary-light;
 }
 
 #__next {
@@ -107,7 +111,10 @@ a {
 }
 
 .prose a {
-  @apply transition-all text-primary;
+  @apply transition-all text-primary no-underline;
+}
+.prose a:hover {
+  @apply text-primary-light;
 }
 
 .prose .anchor:after {
